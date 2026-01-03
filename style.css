@@ -1,0 +1,130 @@
+/* 1. 기본 레이아웃 및 폰트 */
+body {
+    background-color: #f4f7f6;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* 2. 카드 스타일 (대시보드 핵심 디자인) */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+/* 3. 입력창 및 버튼 그룹 */
+.input-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* 4. 할 일 목록 스타일 */
+#todoList {
+    list-style: none;
+    padding: 0;
+}
+
+#todoList li {
+    background: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 5px solid #3498db;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+#todoList li:hover {
+    background: #ffeaa7;
+    text-decoration: line-through;
+}
+
+#todoList li:active {
+    transform: scale(0.95);
+}
+
+.danger-btn {
+    background-color: #e74c3c;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 5. 로또 공 스타일 */
+#lottoNumbers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: inset -3px -3px 5px rgba(0,0,0,0.2);
+}
+
+/* 6. 다크 모드 설정 */
+body.dark-mode {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #34495e;
+    color: white;
+}
+
+.dark-mode input {
+    background-color: #2c3e50;
+    color: white;
+    border-color: #7f8c8d;
+}
+
+/* 7. 반응형 디자인 (모바일) */
+@media (max-width: 600px) {
+    .top-right {
+        position: static;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
